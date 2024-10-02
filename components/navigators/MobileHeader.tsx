@@ -49,7 +49,7 @@ export const MobileHeader = () => {
             <Image
               width={135.75}
               height={33.6167}
-              src="/08/logo.svg"
+              src="08/logo.svg"
               alt="logo"
             />
           </Link>
