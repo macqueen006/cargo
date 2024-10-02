@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import HamburgerBtn from "../ui/buttons/HamburgerBtn";
-import { assetPrefix } from "@/libs/util";
 
 export const MobileHeader = () => {
     const [open, setOpen] = useState<number | null>(null);
@@ -50,7 +49,7 @@ export const MobileHeader = () => {
             <Image
               width={135.75}
               height={33.6167}
-              src={`${assetPrefix}08/logo.svg`} 
+              src="/08/logo.svg"
               alt="logo"
             />
           </Link>

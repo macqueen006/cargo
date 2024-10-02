@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import HamburgerBtn from "../ui/buttons/HamburgerBtn";
-import { assetPrefix } from "@/libs/util";
 
 const linksData = [
   {
@@ -46,7 +45,7 @@ const MainHeader = () => {
             className="flex items-center shrink-0 h-[8rem] max-h-full pl-[4rem]"
           >
             <Image
-              src={`${assetPrefix}08/Logo-Inner-Pages.svg`}
+              src="/08/Logo-Inner-Pages.svg"
               alt=""
               width={135.75}
               height={33.6167}
