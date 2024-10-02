@@ -1,16 +1,22 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 import "./globals.css";
+import { Sarabun, Inter } from "next/font/google";
+import BackToTop from "@/components/BackToTop";
+import TopBanner from "@/components/navigators/TopBanner";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const sarabun = Sarabun({
+  subsets: ["latin"],
+  style: "normal",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+  display: 'swap',
+  variable: '--font-sarabun',
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: 'swap',
+  variable: '--font-inter',
 });
 
 export const metadata: Metadata = {
@@ -25,10 +31,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${sarabun.variable} ${inter.variable} font-sarabun antialiased`}>
+        <TopBanner />
         {children}
+        <BackToTop />
       </body>
     </html>
   );
