@@ -8,7 +8,7 @@ const OurServicesColumns = () => {
           <div className="relative inline-block w-full h-full overflow-hidden">
             <Image
               className="group-hover:translate-x-[.5rem] scale-[1.03] transition-transform duration-[.4s] ease-[cubic-bezier(.6,.6,.29,.95)] block translate-x-0"
-              src="/08/cargo-home-banner-1.jpg"
+              src="08/cargo-home-banner-1.jpg"
               width={1280}
               height={774}
               alt="img"
@@ -33,7 +33,7 @@ const OurServicesColumns = () => {
           <div className="relative inline-block w-full h-full overflow-hidden">
             <Image
               className="group-hover:translate-x-[.5rem] scale-[1.03] transition-transform duration-[.4s] ease-[cubic-bezier(.6,.6,.29,.95)] block translate-x-0"
-              src="/08/cargo-home-banner-2.jpg"
+              src="08/cargo-home-banner-2.jpg"
               width={1280}
               height={774}
               alt="img"

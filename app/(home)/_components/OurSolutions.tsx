@@ -5,7 +5,7 @@ const OurSolutions = () => {
       <section className="mt-[13.4rem] mb-[16rem] block mx-[4rem]">
         <div className="pb-[4.7rem]">
           <Image
-            src="/08/cargo-home-img-1.png"
+            src="08/cargo-home-img-1.png"
             width={355.3}
             height={282.633}
             alt="fork lift"

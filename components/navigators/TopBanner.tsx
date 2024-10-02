@@ -6,7 +6,7 @@ import React from "react";
 const contactInfo = {
   phone: {
     href: "#",
-    iconSrc: "/08/Phone-Icon-2.png",
+    iconSrc: "08/Phone-Icon-2.png",
     iconAlt: "Phone Icon",
     text: "+234 148 06 219",
     iconWidth: 15,
@@ -14,7 +14,7 @@ const contactInfo = {
   },
   email: {
     href: "#",
-    iconSrc: "/08/Mail-Icon-1.png",
+    iconSrc: "08/Mail-Icon-1.png",
     iconAlt: "Mail Icon",
     text: "Godwinsawyer@gmail.com",
     iconWidth: 18,
@@ -22,7 +22,7 @@ const contactInfo = {
   },
   support: {
     href: "#",
-    iconSrc: "/08/Support-Icon-top-header.png",
+    iconSrc: "08/Support-Icon-top-header.png",
     iconAlt: "Support Icon",
     text: "Support 24/7",
     iconWidth: 20,
@@ -30,7 +30,7 @@ const contactInfo = {
   },
   trace: {
     href: "#",
-    iconSrc: "/08/Tracking-Icon.png",
+    iconSrc: "08/Tracking-Icon.png",
     iconAlt: "Tracking Icon",
     text: "Track and Trace",
     iconWidth: 14,

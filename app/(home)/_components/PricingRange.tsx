@@ -80,7 +80,7 @@ const PricingRange = () => {
           </div>
           <div className="mb-[7rem] overflow-hidden order-1">
             <Image
-              src="/10/cargo-home-img-2-new.png"
+              src="10/cargo-home-img-2-new.png"
               alt=""
               width={655}
               height={690}

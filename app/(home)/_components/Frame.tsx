@@ -8,7 +8,7 @@ const Frame = () => {
           <div className="w-full">
             <Image
               className="max-w-full h-auto"
-              src="/08/cargo-home-video-button.jpg"
+              src="08/cargo-home-video-button.jpg"
               alt=""
               width={2560}
               height={1067}

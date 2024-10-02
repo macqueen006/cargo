@@ -38,7 +38,7 @@ const MoreInfo = () => {
               width={800}
               height={408}
               layout="responsive"
-              src="/08/cargo-home-img-3.jpg"
+              src="08/cargo-home-img-3.jpg"
               alt="img"
             />
           </div>

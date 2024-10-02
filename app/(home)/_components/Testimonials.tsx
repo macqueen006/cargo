@@ -45,7 +45,7 @@ const Testimonials = () => {
                 <div className="mr-[3.1rem] w-[7.8rem] h-[7.8rem]">
                   <Image
                     className="rounded-full"
-                    src="/08/main-home-testimonial-150x150.png"
+                    src="08/main-home-testimonial-150x150.png"
                     alt=""
                     width={150}
                     height={150}

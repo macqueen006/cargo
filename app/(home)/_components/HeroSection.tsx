@@ -9,15 +9,15 @@ import Image from "next/image";
 
 const slides = [
   {
-    img: "/10/cargo-home-slider-img-2-new.jpg",
+    img: "10/cargo-home-slider-img-2-new.jpg",
     text: "Always on time",
   },
   {
-    img: "/10/cargo-home-slider-img-1-new.jpg",
+    img: "10/cargo-home-slider-img-1-new.jpg",
     text: "Fast and reliable",
   },
   {
-    img: "/10/cargo-home-slider-img-3-new.jpg",
+    img: "10/cargo-home-slider-img-3-new.jpg",
     text: "Package safety",
   },
 ];

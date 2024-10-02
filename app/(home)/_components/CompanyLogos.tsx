@@ -8,28 +8,28 @@ const CompanyLogos = () => {
           {[
             {
               id: 1,
-              img: "/08/client-1-hover.jpg",
-              logo: "/08/Client-1.png",
+              img: "08/client-1-hover.jpg",
+              logo: "08/Client-1.png",
             },
             {
               id: 2,
-              img: "/08/client-2-hover.jpg",
-              logo: "/08/Client-2.png",
+              img: "08/client-2-hover.jpg",
+              logo: "08/Client-2.png",
             },
             {
               id: 3,
-              img: "/08/client-3-hover.jpg",
-              logo: "/08/Client-3.png",
+              img: "08/client-3-hover.jpg",
+              logo: "08/Client-3.png",
             },
             {
               id: 4,
-              img: "/08/client-4-hover.jpg",
-              logo: "/08/Client-4.png",
+              img: "08/client-4-hover.jpg",
+              logo: "08/Client-4.png",
             },
             {
               id: 5,
-              img: "/08/client-5-hover.jpg",
-              logo: "/08/Client-5.png",
+              img: "08/client-5-hover.jpg",
+              logo: "08/Client-5.png",
             },
           ].map((item, index) => (
             <div

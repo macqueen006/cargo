@@ -12,7 +12,7 @@ const OurDevelopers = () => {
                 <Link href="#">
                   <Image
                     className="clip-img group-hover:clip-img--active max-w-full"
-                    src="/08/main-home-team-1-1.png"
+                    src="08/main-home-team-1-1.png"
                     alt=""
                     width={140}
                     height={140}
@@ -34,7 +34,7 @@ const OurDevelopers = () => {
                 <Link href="#">
                   <Image
                     className="clip-img group-hover:clip-img--active max-w-full"
-                    src="/08/team-single-img1.png"
+                    src="08/team-single-img1.png"
                     alt=""
                     width={140}
                     height={140}
@@ -56,7 +56,7 @@ const OurDevelopers = () => {
                 <Link href="#">
                   <Image
                     className="clip-img group-hover:clip-img--active max-w-full"
-                    src="/08/main-home-team-3-1.png"
+                    src="08/main-home-team-3-1.png"
                     alt=""
                     width={140}
                     height={140}
@@ -78,7 +78,7 @@ const OurDevelopers = () => {
                 <Link href="#">
                   <Image
                     className="clip-img group-hover:clip-img--active max-w-full"
-                    src="/08/main-home-team-4-1.png"
+                    src="08/main-home-team-4-1.png"
                     alt=""
                     width={140}
                     height={140}

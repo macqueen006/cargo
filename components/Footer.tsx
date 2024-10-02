@@ -92,7 +92,7 @@ const footer = {
     name: "Macqueen006",
     url: "#",
   },
-  logo: "/08/Logo-Footer-Dark.svg",
+  logo: "08/Logo-Footer-Dark.svg",
 };
 
 export const Footer = () => {
