@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/cargo/' : '/',
+  basePath: process.env.NODE_ENV === 'production' ? '/cargo' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/cargo/' : '',
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,

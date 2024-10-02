@@ -6,19 +6,24 @@ import "slick-carousel/slick/slick-theme.css";
 import NextArrow from "@/components/ui/buttons/NextArrow";
 import PrevArrow from "@/components/ui/buttons/PrevArrow";
 import Image from "next/image";
+import { prefix } from "@/libs/util";
 
 const slides = [
   {
-    img: "10/cargo-home-slider-img-2-new.jpg",
+    img: `${prefix}10/cargo-home-slider-img-2-new.jpg`,
     text: "Always on time",
   },
   {
-    img: "10/cargo-home-slider-img-1-new.jpg",
+    img: `${prefix}10/cargo-home-slider-img-1-new.jpg`,
     text: "Fast and reliable",
   },
   {
-    img: "10/cargo-home-slider-img-3-new.jpg",
+    img: `${prefix}10/cargo-home-slider-img-3-new.jpg`,
     text: "Package safety",
+  },
+  {
+    img: `${prefix}08/air-blog-img2.jpg`,
+    text: "Always ahead",
   },
 ];
 
@@ -99,7 +104,7 @@ const HeroSection = () => {
           className="bullets lg:block hidden opacity-100 absolute top-full left-1/2 h-[8rem] z-[6] -translate-x-[15rem] -translate-y-[8.1rem] visible"
           style={{ width: `${slides.length * 100}px` }}
         >
-          {[...Array(3)].map((_, index) => (
+          {[...Array(slides.length)].map((_, index) => (
             <div
               key={index}
               onClick={() => goToSlide(index)}

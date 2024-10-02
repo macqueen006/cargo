@@ -1,6 +1,8 @@
 import { clsx, ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
+export const prefix = process.env.NODE_ENV === 'development' ? '/' : '';
+
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
