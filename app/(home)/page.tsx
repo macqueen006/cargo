@@ -6,7 +6,7 @@ import MobileHeader from "@/components/navigators/MobileHeader";
 import OurSolutions from "./_components/OurSolutions";
 import OurServicesColumns from "./_components/OurServicesColumns";
 import Testimonials from "./_components/Testimonials";
-// import Counters from "./_components/Counters";
+import Counters from "./_components/Counters";
 // import MoreInfo from "./_components/MoreInfo";
 // import OurDevelopers from "./_components/OurDevelopers";
 // import Frame from "./_components/Frame";
@@ -26,8 +26,8 @@ export default function Home() {
           <OurSolutions />
           <OurServicesColumns />
           <Testimonials />
-          {/* <Counters />
-          <MoreInfo />
+          <Counters />
+          {/* <MoreInfo />
           <OurDevelopers />
           <Frame />
           <PricingRange />
