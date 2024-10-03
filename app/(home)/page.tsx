@@ -4,7 +4,7 @@ import MainHeader from "@/components/navigators/MainHeader";
 import MobileHeader from "@/components/navigators/MobileHeader";
 // import Footer from "@/components/Footer";
 import OurSolutions from "./_components/OurSolutions";
-// import OurServicesColumns from "./_components/OurServicesColumns";
+import OurServicesColumns from "./_components/OurServicesColumns";
 // import Testimonials from "./_components/Testimonials";
 // import Counters from "./_components/Counters";
 // import MoreInfo from "./_components/MoreInfo";
@@ -24,8 +24,8 @@ export default function Home() {
         <main className="relative inline-block w-full align-top">
           <HeroSection />
           <OurSolutions />
-          {/* <OurServicesColumns />
-          <Testimonials />
+          <OurServicesColumns />
+          {/* <Testimonials />
           <Counters />
           <MoreInfo />
           <OurDevelopers />
