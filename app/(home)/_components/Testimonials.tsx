@@ -1,9 +1,25 @@
+import { prefix } from "@/libs/util";
 import Image from "next/image";
+
+interface TestimonialData {
+  quote: string;
+  clientName: string;
+  clientTitle: string;
+  clientImage: string;
+}
+
+const data: TestimonialData = {
+  quote: "Eos no dico graeci sea, debet nihil omnium quodsi quot dolores percipit.",
+  clientName: "Godwin Sawyer",
+  clientTitle: "Satisfied Client",
+  clientImage: `${prefix}08/main-home-testimonial-150x150.png`
+};
+
 
 const Testimonials = () => {
     return (
-      <section className="block relative p-[4rem]">
-        <div className="absolute top-0 left-0 overflow-hidden z-0 bg-black w-[calc(100%+1px)] h-[calc(100%+1px)]">
+      <section className="block relative py-[10.6%]">
+        <div className="absolute top-0 left-0 overflow-hidden z-0 bg-black w-full h-full">
           <video
             muted
             loop
@@ -12,8 +28,9 @@ const Testimonials = () => {
             src="https://globefarer.qodeinteractive.com/wp-content/uploads/2021/09/flag-x.mp4"
           ></video>
         </div>
-        <div className="relative z-10 min-h-[83rem] lg:min-h-[71rem] flex items-center justify-center flex-wrap lg:flex-nowrap">
-          <div>
+
+        <div className="relative z-10 sm:min-h-[83rem] w-[calc(100%-80px)] max-w-[1100px] mx-auto md:min-h-[71rem] lg:min-h-[20vw] flex items-center justify-center lg:justify-end flex-wrap lg:flex-nowrap">
+          <div className="max-w-[56rem]">
             <div className="w-[7rem] h-[6.79667] mb-[4rem] text-[#FFFFFF59]">
               <svg
                 className=""
@@ -38,31 +55,30 @@ const Testimonials = () => {
             </div>
             <div className="">
               <h2 className="text-white mb-[5.4rem] text-[3.7rem] leading-[4.5rem] -tracking-[0.037rem] font-bold">
-                Eos no dico graeci sea, debet nihil omnium quodsi quot dolores
-                percipit.
+                {data.quote}
               </h2>
               <div className="flex items-center">
                 <div className="mr-[3.1rem] w-[7.8rem] h-[7.8rem]">
                   <Image
                     className="rounded-full"
-                    src="08/main-home-testimonial-150x150.png"
-                    alt=""
+                    src={data.clientImage}
+                    alt="client image"
                     width={150}
                     height={150}
                   />
                 </div>
                 <div className="">
                   <h6 className="text-[#777777] font-medium text-[1.5rem] leading-[2.1rem] -tracking-[0.015rem]">
-                    Satisfied Client
+                    {data.clientTitle}
                   </h6>
                   <h3 className="text-white font-bold text-[2.6rem] leading-[3.3rem] -tracking-[0.026rem]">
-                    Godwin Sawyer
+                    {data.clientName}
                   </h3>
                 </div>
               </div>
             </div>
           </div>
-          {/* <span className=""></span> */}
+          
         </div>
       </section>
     );

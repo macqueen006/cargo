@@ -5,7 +5,7 @@ import MobileHeader from "@/components/navigators/MobileHeader";
 // import Footer from "@/components/Footer";
 import OurSolutions from "./_components/OurSolutions";
 import OurServicesColumns from "./_components/OurServicesColumns";
-// import Testimonials from "./_components/Testimonials";
+import Testimonials from "./_components/Testimonials";
 // import Counters from "./_components/Counters";
 // import MoreInfo from "./_components/MoreInfo";
 // import OurDevelopers from "./_components/OurDevelopers";
@@ -25,8 +25,8 @@ export default function Home() {
           <HeroSection />
           <OurSolutions />
           <OurServicesColumns />
-          {/* <Testimonials />
-          <Counters />
+          <Testimonials />
+          {/* <Counters />
           <MoreInfo />
           <OurDevelopers />
           <Frame />
