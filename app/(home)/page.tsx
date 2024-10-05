@@ -2,6 +2,7 @@ import React from "react";
 import HeroSection from "./_components/HeroSection";
 import MainHeader from "@/components/navigators/MainHeader";
 import MobileHeader from "@/components/navigators/MobileHeader";
+import MoreInfo from "@/app/(home)/_components/MoreInfo";
 // import Footer from "@/components/Footer";
 import OurSolutions from "./_components/OurSolutions";
 import OurServicesColumns from "./_components/OurServicesColumns";
@@ -27,8 +28,8 @@ export default function Home() {
           <OurServicesColumns />
           <Testimonials />
           <Counters />
-          {/* <MoreInfo />
-          <OurDevelopers />
+           <MoreInfo />
+            {/*<OurDevelopers />
           <Frame />
           <PricingRange />
           <CompanyLogos /> */}

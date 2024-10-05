@@ -225,6 +225,18 @@
             animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   }
 
+  .m-text::after {
+    background-color: #a6a6a6;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 100vw;
+  }
+
 
 }
 
