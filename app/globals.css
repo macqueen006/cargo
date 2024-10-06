@@ -64,10 +64,9 @@
     transition: -webkit-clip-path 0.6s cubic-bezier(0.57, 0.57, 0, 0.97);
     transition: clip-path 0.6s cubic-bezier(0.57, 0.57, 0, 0.97);
   }
-  .clip-img--active {
+  .clip-img.active {
     clip-path: circle(50% at 50% 50%);
   }
-
   .hover-logo {
     position: relative;
     width: auto;

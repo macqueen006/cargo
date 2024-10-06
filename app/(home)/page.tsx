@@ -8,11 +8,20 @@ import OurSolutions from "./_components/OurSolutions";
 import OurServicesColumns from "./_components/OurServicesColumns";
 import Testimonials from "./_components/Testimonials";
 import Counters from "./_components/Counters";
-// import MoreInfo from "./_components/MoreInfo";
-// import OurDevelopers from "./_components/OurDevelopers";
+import { prefix } from "@/libs/util";
+import OurDevelopers from "./_components/OurDevelopers";
 // import Frame from "./_components/Frame";
 // import PricingRange from "./_components/PricingRange";
 // import CompanyLogos from "./_components/CompanyLogos";
+const moreInfoData = {
+  title: "Globefarer offers global shipping",
+  description:
+    "Providing independent advice and identifying the right fit for you. Services are sourced.",
+  href: "#",
+  buttonText: "about our services",
+  imageSrc: `${prefix}08/cargo-home-img-3.jpg`,
+  imageAlt: "Image showing global shipping",
+};
 
 export default function Home() {
   return (
@@ -28,9 +37,9 @@ export default function Home() {
           <OurServicesColumns />
           <Testimonials />
           <Counters />
-           <MoreInfo />
-            {/*<OurDevelopers />
-          <Frame />
+          <MoreInfo data={moreInfoData} />
+          <OurDevelopers />
+          {/* <Frame />
           <PricingRange />
           <CompanyLogos /> */}
         </main>
@@ -39,5 +48,3 @@ export default function Home() {
     </>
   );
 }
-
-

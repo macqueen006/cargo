@@ -34,7 +34,7 @@ const data:SolutionProps = {
 
 const OurSolutions = () => {
   return (
-    <section className="mt-[13.4rem] mb-[16rem] block mx-[4rem] lg:flex max-w-[110rem] lg:mx-auto">
+    <section className="mt-[13.4rem] mb-[16rem] block px-[4rem] xl:px-0 lg:flex max-w-[110rem] mx-auto">
     <div className="pb-[4.7rem] lg:basis-[34%] relative overflow-hidden">
       <Image
         src={data.imageSrc}

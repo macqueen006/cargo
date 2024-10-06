@@ -1,7 +1,7 @@
 const Counters = () => {
     return (
       <section className="py-[16rem] bg-main-color block relative">
-        <div className="px-[4rem] lg:px-0 w-full flex flex-wrap relative max-w-[1100px] mx-auto">
+        <div className="px-[4rem] xl:px-0 w-full flex flex-wrap relative max-w-[1100px] mx-auto">
           <div className="w-full flex content-start pb-[7rem] lg:pb-0 sm:basis-1/2 lg:basis-1/4">
             <div className="pl-[4rem] border-l border-dark-color">
               <h6 className="mb-[1rem] text-[1.5rem] leading-[2.1rem] -tracking-[0.015rem] font-medium">
