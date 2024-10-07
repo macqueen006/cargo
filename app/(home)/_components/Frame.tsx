@@ -1,17 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
+import {prefix} from "@/libs/util";
 
 const Frame = () => {
     return (
-      <section className="relative block">
-        <div className="relative w-full">
+      <section className="relative block w-full">
+        <div className="relative block w-full">
           <div className="w-full">
             <Image
-              className="max-w-full h-auto"
-              src="08/cargo-home-video-button.jpg"
+              className="w-full h-auto"
+              src={`${prefix}08/cargo-home-video-button.jpg`}
               alt=""
-              width={2560}
-              height={1067}
+              width={1235}
+              height={515}
             />
           </div>
           <Link

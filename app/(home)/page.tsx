@@ -8,11 +8,12 @@ import OurSolutions from "./_components/OurSolutions";
 import OurServicesColumns from "./_components/OurServicesColumns";
 import Testimonials from "./_components/Testimonials";
 import Counters from "./_components/Counters";
-import { prefix } from "@/libs/util";
 import OurDevelopers from "./_components/OurDevelopers";
-// import Frame from "./_components/Frame";
+import Frame from "./_components/Frame";
 // import PricingRange from "./_components/PricingRange";
 // import CompanyLogos from "./_components/CompanyLogos";
+import { prefix } from "@/libs/util";
+
 const moreInfoData = {
   title: "Globefarer offers global shipping",
   description:
@@ -39,8 +40,8 @@ export default function Home() {
           <Counters />
           <MoreInfo data={moreInfoData} />
           <OurDevelopers />
-          {/* <Frame />
-          <PricingRange />
+          <Frame />
+          {/* <PricingRange />
           <CompanyLogos /> */}
         </main>
       </div>
