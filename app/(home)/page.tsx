@@ -3,7 +3,7 @@ import HeroSection from "./_components/HeroSection";
 import MainHeader from "@/components/navigators/MainHeader";
 import MobileHeader from "@/components/navigators/MobileHeader";
 import MoreInfo from "@/app/(home)/_components/MoreInfo";
-// import Footer from "@/components/Footer";
+import Footer from "@/components/Footer";
 import OurSolutions from "./_components/OurSolutions";
 import OurServicesColumns from "./_components/OurServicesColumns";
 import Testimonials from "./_components/Testimonials";
@@ -45,7 +45,7 @@ export default function Home() {
                     <CompanyLogos/>
                 </main>
             </div>
-            {/* <Footer /> */}
+            <Footer/>
         </>
     );
 }
