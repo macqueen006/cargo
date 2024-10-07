@@ -4,7 +4,7 @@ import {prefix} from "@/libs/util";
 
 const PricingRange = () => {
     return (
-      <section className="pb-[15.5rem] lg:pb-[11rem] bg-[#12171b] inline-block">
+      <section className="pb-[15.5rem] lg:pb-[11rem] bg-[#12171b] inline-block w-full">
         <div className="mx-auto w-[calc(100%-80px)] xl:w-[110rem] relative flex lg:flex-row flex-wrap">
           <div className="w-full lg:basis-1/2 order-2 lg:order-1 lg:pt-[7.2rem] lg:pr-[7.2rem]">
             <div className="mb-[2rem]">
