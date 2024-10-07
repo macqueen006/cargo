@@ -1,13 +1,14 @@
 
 import Image from "next/image";
+import {prefix} from "@/libs/util";
 
 const PricingRange = () => {
     return (
-      <section className="pb-[15.5rem] bg-[#12171b] block">
-        <div className="px-[4rem] relative flex flex-wrap">
-          <div className="w-full order-2">
+      <section className="pb-[15.5rem] lg:pb-[11rem] bg-[#12171b] inline-block">
+        <div className="mx-auto w-[calc(100%-80px)] xl:w-[110rem] relative flex lg:flex-row flex-wrap">
+          <div className="w-full lg:basis-1/2 order-2 lg:order-1 lg:pt-[7.2rem] lg:pr-[7.2rem]">
             <div className="mb-[2rem]">
-              <h2 className="pb-[1.8rem] text-white text-[3.7rem] leading-[4.5rem] -tracking-[0.037rem] font-bold">
+              <h2 className="pb-[1.8rem] text-white text-[3.7rem] lg:text-[4.4rem] leading-[4.5rem] lg:leading-[5.2rem] -tracking-[0.037rem] lg:-tracking-[0.045rem] font-bold">
                 Our fleet covers your needs & pricing range
               </h2>
             </div>
@@ -78,9 +79,9 @@ const PricingRange = () => {
               </ul>
             </div>
           </div>
-          <div className="mb-[7rem] overflow-hidden order-1">
+          <div className="w-full lg:basis-1/2 mb-[7rem] lg:mb-0 overflow-hidden order-1 lg:order-2 lg:px-[1rem]">
             <Image
-              src="10/cargo-home-img-2-new.png"
+              src={`${prefix}10/cargo-home-img-2-new.png`}
               alt=""
               width={655}
               height={690}

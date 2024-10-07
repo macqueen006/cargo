@@ -10,7 +10,7 @@ import Testimonials from "./_components/Testimonials";
 import Counters from "./_components/Counters";
 import OurDevelopers from "./_components/OurDevelopers";
 import Frame from "./_components/Frame";
-// import PricingRange from "./_components/PricingRange";
+import PricingRange from "./_components/PricingRange";
 // import CompanyLogos from "./_components/CompanyLogos";
 import { prefix } from "@/libs/util";
 
@@ -41,8 +41,8 @@ export default function Home() {
           <MoreInfo data={moreInfoData} />
           <OurDevelopers />
           <Frame />
-          {/* <PricingRange />
-          <CompanyLogos /> */}
+          <PricingRange />
+          {/* <CompanyLogos /> */}
         </main>
       </div>
       {/* <Footer /> */}
