@@ -33,6 +33,14 @@ const slides = [
         },
         text: "Package safety",
     },
+    {
+        img: {
+            desktop: `${prefix}08/air-blog-img2-1024x523.jpg`,
+            tablet: `${prefix}08/air-blog-img2-768x392.jpg`,
+            mobile: `${prefix}08/air-blog-img2-640x430.jpg`,
+        },
+        text: "Always ahead",
+    },
 ];
 
 const HeroSection = () => {

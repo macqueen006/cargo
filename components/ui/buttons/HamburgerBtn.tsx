@@ -3,16 +3,18 @@ import React from "react";
 interface ButtonProps {
   toggle: boolean;
   handleToggle: () => void;
+  dark: boolean;
+
 }
 
-const HamburgerBtn: React.FC<ButtonProps> = ({ toggle, handleToggle }) => {
+const HamburgerBtn: React.FC<ButtonProps> = ({ toggle, handleToggle, dark }) => {
   return (
     <button
-      className="w-[8rem] h-[8rem] bg-dark-color block"
+      className={`w-[8rem] h-[8rem] z-10 bg-dark-color block relative overflow-hidden -mt-[1px] m-icon hover:open ${dark ? "hover:dark text-white": "hover:light text-dark-color"}`}
       onClick={handleToggle}
     >
       {toggle ? (
-        <span className="px-[3rem] flex items-center h-full text-white">
+        <span className="relative z-[1] px-[3rem] flex items-center h-full">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="19.778"
@@ -45,7 +47,7 @@ const HamburgerBtn: React.FC<ButtonProps> = ({ toggle, handleToggle }) => {
           </svg>
         </span>
       ) : (
-        <span className="px-[2.7rem] flex items-center h-full text-white">
+        <span className="relative z-[1] px-[2.7rem] flex items-center h-full">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="26"

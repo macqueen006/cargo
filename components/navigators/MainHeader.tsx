@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import HamburgerBtn from "../ui/buttons/HamburgerBtn";
 import { prefix } from "@/libs/util";
+import {useDrawer} from "@/app/context/DrawerContext";
 
 const linksData = [
   {
@@ -34,8 +35,8 @@ const linksData = [
 ];
 
 const MainHeader = () => {
-  const [toggle, setToggle] = useState(false);
-  const handleToggle = () => setToggle(!toggle);
+
+  const {isDrawerOpen, toggleDrawer} = useDrawer();
 
   return (
     <>
@@ -107,7 +108,7 @@ const MainHeader = () => {
               </form>
             </TrackAndTraceDropdown>
             <div className="flex items-center h-full relative">
-              <HamburgerBtn toggle={toggle} handleToggle={handleToggle} />
+              <HamburgerBtn dark={true} toggle={isDrawerOpen} handleToggle={toggleDrawer} />
             </div>
             {/* Hamburger menu */}
           </div>
@@ -121,6 +122,7 @@ interface DropdownLinkProps {
   label: string;
   href: string;
   dropdownItems?: { href: string; text: string }[];
+  key: number
 }
 
 const LinkWithDropdown: React.FC<DropdownLinkProps> = ({
@@ -129,7 +131,7 @@ const LinkWithDropdown: React.FC<DropdownLinkProps> = ({
   dropdownItems,
 }) => {
   return (
-    <li className="h-full px-[2.8rem] header-transition group">
+    <li  className="h-full px-[2.8rem] header-transition group">
       <Link href={href} className="flex relative items-center h-full">
         <span className="font-bold text-[1.7rem] leading-[2.2rem] -tracking-[0.017rem]">
           {label}

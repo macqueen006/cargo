@@ -54,7 +54,7 @@ export const MobileHeader = () => {
               alt="logo"
             />
           </Link>
-          <HamburgerBtn toggle={toggle} handleToggle={handleToggle} />
+          <HamburgerBtn dark={true} toggle={toggle} handleToggle={handleToggle} />
         </div>
         <nav
           className={`absolute block top-full left-0 w-full transition-all duration-500 ease-out ${

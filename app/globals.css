@@ -26,6 +26,7 @@
     html,
     body {
         font-size: 62.5%;
+        scroll-behavior: smooth;
     }
 
     body {
@@ -172,7 +173,7 @@
         height: 100%;
         min-height: 100%;
         overflow: hidden;
-        padding: 148px 70px 35px 80px;
+        /*padding: 148px 70px 35px 80px;*/
         position: fixed;
         right: -500px;
         top: 0;
@@ -249,6 +250,7 @@
         width: 100vw;
     }
 
+    /*Animation foe the hero section text */
     .scale-text-bottom {
         -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -266,6 +268,7 @@
             opacity: 1;
         }
     }
+
     @keyframes slide-in-bottom {
         0% {
             -webkit-transform: translateY(1000px);
@@ -277,6 +280,49 @@
             transform: translateY(0);
             opacity: 1;
         }
+    }
+
+    /*for the hamburger icon */
+    .m-icon::before {
+        content: "";
+        position: absolute;
+        background: var(--main-color);
+        width: 150%;
+        height: 0;
+        padding-bottom: 150%;
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+        transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 1);
+        opacity: 0;
+        transition: transform 0.3s cubic-bezier(0.1, 0, 0.3, 1), opacity 0.3s;
+    }
+
+    .m-icon:hover.open::before {
+        transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+        opacity: 1;
+        transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1), opacity 0.3s;
+    }
+
+    .m-icon:hover.dark {
+        color: var(--dark-color);
+    }
+
+    .m-icon:hover.light {
+        color: #fff;
+    }
+
+    /*    Back to top */
+    .back-to-top-off {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.15s ease, visibility 0s 0.15s;
+    }
+
+    .back-to-top-on {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.3s ease;
     }
 
 
