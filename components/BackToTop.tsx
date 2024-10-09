@@ -2,9 +2,9 @@
 import {useEffect, useState} from "react";
 
 const BackToTop = () => {
-    const [visible, setVisible] = useState(false);
+    const [visible, setVisible] = useState<boolean>(false);
 
-    const handleScroll = () => {
+    const handleScroll = (): void => {
         if (window.scrollY > 600) {
             setVisible(true);
         } else {
@@ -14,25 +14,25 @@ const BackToTop = () => {
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
-        return () => {
+        return ():void => {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
 
-    const scrollToTop = (duration = 500) => {
-        const start = window.scrollY;
-        const startTime = performance.now();
+    const scrollToTop = (duration: number = 500):void => {
+        const start: number = window.scrollY;
+        const startTime: number = performance.now();
 
-        const animateScroll = (currentTime) => {
-            const timeElapsed = currentTime - startTime;
-            const progress = Math.min(timeElapsed / duration, 1); // Calculate the progress (0 to 1)
+        const animateScroll = (currentTime): void => {
+            const timeElapsed: number = currentTime - startTime;
+            const progress: number = Math.min(timeElapsed / duration, 1); // Calculate the progress (0 to 1)
 
             // Apply easing (easeInOutQuad for smoother scrolling)
-            const easeInOutQuad = (t) => {
+            const easeInOutQuad = (t): number => {
                 return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
             };
 
-            const easeProgress = easeInOutQuad(progress);
+            const easeProgress: number = easeInOutQuad(progress);
             window.scrollTo(0, start - start * easeProgress); // Scroll to the calculated position
 
             if (progress < 1) {
