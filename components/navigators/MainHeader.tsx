@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
 import HamburgerBtn from "../ui/buttons/HamburgerBtn";
 import { prefix } from "@/libs/util";
 import {useDrawer} from "@/app/context/DrawerContext";

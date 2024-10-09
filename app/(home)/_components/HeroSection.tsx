@@ -37,7 +37,7 @@ const slides = [
         img: {
             desktop: `${prefix}08/air-blog-img2-1024x523.jpg`,
             tablet: `${prefix}08/air-blog-img2-768x392.jpg`,
-            mobile: `${prefix}08/air-blog-img2-640x430.jpg`,
+            mobile: `${prefix}08/air-blog-img2-650x650.jpg`,
         },
         text: "Always ahead",
     },
