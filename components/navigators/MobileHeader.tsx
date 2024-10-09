@@ -57,9 +57,9 @@ export const MobileHeader = () => {
           <HamburgerBtn toggle={toggle} handleToggle={handleToggle} />
         </div>
         <nav
-          className={`absolute top-full left-0 w-full ${
-            toggle ? "block max-h-[calc(100vh - 8rem)]" : "hidden max-h-0"
-          } bg-white border-b border-border-grey overflow-x-hidden overflow-y-scroll z-10`}
+          className={`absolute block top-full left-0 w-full transition-all duration-500 ease-out ${
+            toggle ? "max-h-[calc(100vh-80px)]" : "max-h-0"
+          } bg-white border-b border-border-grey overflow-hidden z-10`}
         >
           <ul className="px-[4rem] pt-[1.8rem] pb-[3.4rem] mx-auto">
             {menus.map((item, index) => (

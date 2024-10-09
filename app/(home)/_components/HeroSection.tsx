@@ -1,131 +1,137 @@
 "use client";
-import React, { useState } from "react";
-import Slider, { LazyLoadTypes } from "react-slick";
+import React, {useState} from "react";
+import Slider, {LazyLoadTypes} from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import NextArrow from "@/components/ui/buttons/NextArrow";
 import PrevArrow from "@/components/ui/buttons/PrevArrow";
 import Image from "next/image";
-import { prefix } from "@/libs/util";
+import {prefix} from "@/libs/util";
 
 const slides = [
-  {
-    img: `${prefix}10/cargo-home-slider-img-2-new.jpg`,
-    text: "Always on time",
-  },
-  {
-    img: `${prefix}10/cargo-home-slider-img-1-new.jpg`,
-    text: "Fast and reliable",
-  },
-  {
-    img: `${prefix}10/cargo-home-slider-img-3-new.jpg`,
-    text: "Package safety",
-  },
-  {
-    img: `${prefix}08/air-blog-img2.jpg`,
-    text: "Always ahead",
-  },
+    {
+        text: "Always on time",
+        img: {
+            desktop: `${prefix}10/cargo-home-slider-img-2-new.jpg`,
+            tablet: `${prefix}09/cargo-home-slider-tablet-img-2.jpg`,
+            mobile: `${prefix}09/cargo-home-slider-mobile-img-2.jpg`,
+        },
+    },
+    {
+        img: {
+            desktop: `${prefix}10/cargo-home-slider-img-1-new.jpg`,
+            tablet: `${prefix}09/cargo-home-slider-tablet-img-1.jpg`,
+            mobile: `${prefix}09/cargo-home-slider-mobile-img-1.jpg`,
+        },
+        text: "Fast and reliable",
+    },
+    {
+        img: {
+            desktop: `${prefix}10/cargo-home-slider-img-3-new.jpg`,
+            tablet: `${prefix}09/cargo-home-slider-tablet-img-3.jpg`,
+            mobile: `${prefix}09/cargo-home-slider-mobile-img-3.jpg`,
+        },
+        text: "Package safety",
+    },
 ];
 
 const HeroSection = () => {
-  const [slider, setSlider] = useState<Slider | null>(null);
-  const [activeSlide, setActiveSlide] = useState<number>(0);
+    const [slider, setSlider] = useState<Slider | null>(null);
+    const [activeSlide, setActiveSlide] = useState<number>(0);
 
-  interface SliderSettings {
-    dots: boolean;
-    infinite: boolean;
-    fade: boolean;
-    lazyLoad: LazyLoadTypes;
-    autoplay: boolean;
-    waitForAnimate: boolean;
-    speed: number;
-    slidesToShow: number;
-    slidesToScroll: number;
-    nextArrow?: JSX.Element;
-    prevArrow?: JSX.Element;
-    beforeChange: (current: number, next: number) => void;
-  }
+    interface SliderSettings {
+        className: string,
+        dots: boolean;
+        infinite: boolean;
+        fade: boolean;
+        lazyLoad: LazyLoadTypes;
+        autoplay: boolean;
+        waitForAnimate: boolean;
+        speed: number;
+        slidesToShow: number;
+        slidesToScroll: number;
+        nextArrow?: JSX.Element;
+        prevArrow?: JSX.Element;
+        beforeChange: (current: number, next: number) => void;
+    }
 
-  const settings: SliderSettings = {
-    dots: false,
-    infinite: true,
-    fade: true,
-    lazyLoad: "ondemand" as LazyLoadTypes,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 3000,
-    waitForAnimate: false,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-    beforeChange: (current, next) => setActiveSlide(next),
-  };
+    const settings: SliderSettings = {
+        className: "h-full w-full",
+        dots: false,
+        infinite: true,
+        fade: true,
+        lazyLoad: "ondemand" as LazyLoadTypes,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 800,
+        waitForAnimate: false,
+        nextArrow: <NextArrow/>,
+        prevArrow: <PrevArrow/>,
+        beforeChange: (current, next) => setActiveSlide(next),
+    };
 
-  const goToSlide = (index: number) => {
-    slider?.slickGoTo(index);
-  };
+    const goToSlide = (index: number) => {
+        slider?.slickGoTo(index);
+    };
 
-  return (
-    <section className="relative block h-[81.2rem] lg:h-[65.3rem] bg-main-color">
-      <div className="w-full visible block absolute top-0 left-0 h-full">
-        <div className="slider-container">
-          <Slider ref={(s) => setSlider(s)} {...settings}>
-            {slides.map((slide, index) => (
-              <div key={index} className="h-[81.2rem] lg:h-[65.3rem] w-full">
-                <div className="w-full h-[42rem] sm:h-[55rem] lg:h-full relative mt-[183px] sm:mt-[105px] lg:mt-0">
-                  <Image
-                    src={slide.img}
-                    style={{ objectFit: "cover" }}
-                    fill
-                    alt="img"
-                  />
-                </div>
-                {/* Image */}
-                <div className="absolute block left-[3.5rem] top-[62.7rem] lg:left-[12.5rem] lg:top-[46.8rem] z-[9]">
-                  <div className="absolute block overflow-hidden transform origin-center translate-x-0 translate-y-0">
-                    <div
-                      className={`w-[30.5rem] h-[10rem] z-[9] text-left text-[4rem] leading-[4.7rem] -tracking-[0.1rem] font-bold transform origin-center translate-x-0 ${
-                        index === activeSlide
-                          ? "translate-y-[10rem]"
-                          : "translate-y-0"
-                      } transition-transform ease-out lg:text-[6.5rem] lg:leading-[7.2rem] lg:h-[8rem] lg:w-[60rem] font-inter`}
-                    >
-                      {slide.text}
-                    </div>
-                  </div>
-                </div>
-                {/* text */}
-              </div>
-            ))}
-          </Slider>
-        </div>
+    return (
+        <section className="relative block w-full h-auto bg-main-color">
+            <div className="slider-container w-full h-[81.2rem] relative lg:h-[67.6rem]">
+                <Slider ref={(s) => setSlider(s)} {...settings}>
+                    {slides.map((slide, index) => (
+                        <div key={index} className="w-full h-[81.2rem] lg:h-[67.6rem]">
+                            <picture>
+                                <source media="(max-width: 640px)" srcSet={slide.img.mobile}/>
+                                <source media="(min-width: 641px) and (max-width: 1024px)" srcSet={slide.img.tablet}/>
+                                <source media="(min-width: 641px)" srcSet={slide.img.desktop}/>
+                                <Image
+                                    className="block"
+                                    src={slide.img.desktop}
+                                    style={{objectFit: "cover", backgroundPosition: 'center 0'}}
+                                    fill
+                                    alt="img"
+                                />
+                            </picture>
 
-        <div
-          className="bullets lg:block hidden opacity-100 absolute top-full left-1/2 h-[8rem] z-[6] -translate-x-[15rem] -translate-y-[8.1rem] visible"
-          style={{ width: `${slides.length * 100}px` }}
-        >
-          {[...Array(slides.length)].map((_, index) => (
-            <div
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`bullet ${
-                index === activeSlide ? "selected" : ""
-              } absolute top-0 flex items-center justify-center visible w-[10rem] h-[8rem] bg-transparent text-dark-color cursor-pointer`}
-              style={{ left: `${index * 100}px` }}
-            >
+                            <div
+                                className="absolute block left-[3.5rem] top-[62.7rem] lg:left-[12.5rem] lg:top-[46.8rem] z-[9]">
+                                <div
+                                    className="absolute block overflow-hidden">
+                                    <div className={`w-[30.5rem] h-[10rem] z-[9] text-left text-[4rem] leading-[4.7rem] -tracking-[0.1rem] font-bold transform origin-center translate-x-0 
+                                    ${index === activeSlide && "scale-text-bottom"}  lg:text-[6.5rem] lg:leading-[7.2rem] lg:h-[8rem] lg:w-[60rem] font-inter`}
+                                    >
+                                        {slide.text}
+                                    </div>
+                                </div>
+                            </div>
+                            {/* text */}
+                        </div>
+                    ))}
+                </Slider>
+                <div
+                    className="bullets lg:block hidden opacity-100 absolute top-full left-1/2 h-[8rem] z-[6] -translate-x-[15rem] -translate-y-[8.1rem] visible"
+                    style={{width: `${slides.length * 100}px`}}>
+                    {[...Array(slides.length)].map((_, index) => (
+                        <div
+                            key={index}
+                            onClick={() => goToSlide(index)}
+                            className={`bullet ${
+                                index === activeSlide ? "selected" : ""
+                            } absolute top-0 flex items-center justify-center visible w-[10rem] h-[8rem] bg-transparent text-dark-color cursor-pointer`}
+                            style={{left: `${index * 100}px`}}
+                        >
               <span className="text-[1.7rem] leading-[2.2rem] -tracking-[0.018rem] font-bold font-arial">
                 {String(index + 1).padStart(2, "0")}
               </span>
+                        </div>
+                    ))}
+                </div>
+                {/*bullets */}
             </div>
-          ))}
-        </div>
-        {/* bullets */}
-      </div>
-    </section>
-  );
+        </section>
+    );
 };
-
-
 
 
 export default HeroSection;
