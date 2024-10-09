@@ -5,6 +5,7 @@ import {useDrawer} from "@/app/context/DrawerContext";
 import PerfectScrollbar from "perfect-scrollbar";
 import "perfect-scrollbar/css/perfect-scrollbar.css"
 import {useEffect, useRef} from "react";
+import {prefix} from "@/libs/util";
 
 
 const SidebarDrawer = () => {
@@ -48,7 +49,7 @@ const SidebarDrawer = () => {
                             <figure>
                                 <Link href="#" className="inline-block">
                                     <Image
-                                        src="/08/Logo-sida-area.svg"
+                                        src={`${prefix}08/Logo-sida-area.svg`}
                                         alt=""
                                         width={178}
                                         height={44}
