@@ -28,7 +28,7 @@ const BackToTop = () => {
             const progress: number = Math.min(timeElapsed / duration, 1); // Calculate the progress (0 to 1)
 
             // Apply easing (easeInOutQuad for smoother scrolling)
-            const easeInOutQuad = (t): number => {
+            const easeInOutQuad = (t: number): number => {
                 return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
             };
 
