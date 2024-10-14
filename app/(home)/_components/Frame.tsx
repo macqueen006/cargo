@@ -1,6 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 import {prefix} from "@/libs/util";
+import VideoPopup from "@/components/VideoPopup";
 
 const Frame = () => {
     return (
@@ -15,10 +16,7 @@ const Frame = () => {
               height={515}
             />
           </div>
-          <Link
-            className="absolute top-0 left-0 w-full h-full z-10 flex justify-center items-center"
-            href="#"
-          />
+         <VideoPopup />
         </div>
       </section>
     );
