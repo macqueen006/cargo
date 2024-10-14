@@ -30,7 +30,7 @@ const OurServicesColumns = () => {
     return (
       <section className="flex flex-wrap mx-auto relative">
       {data.map((banner, index) => (
-        <div key={index} className="relative group grow lg:flex-1">
+        <div key={index} className="interactive scale relative group grow lg:flex-1">
           <div className="relative inline-block w-full h-full overflow-hidden">
             <Image
               className="group-hover:translate-x-[.5rem] scale-[1.03] transition-transform duration-[.4s] ease-[cubic-bezier(.6,.6,.29,.95)] block translate-x-0"
@@ -38,7 +38,6 @@ const OurServicesColumns = () => {
               width={1280}
               height={774}
               alt={banner.altText}
-              layout="responsive"
             />
           </div>
           <div className="absolute container-transition top-0 left-0 text-white w-full h-full flex flex-col items-center justify-center text-center p-[3rem]">

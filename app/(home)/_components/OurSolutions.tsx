@@ -34,7 +34,7 @@ const data:SolutionProps = {
 
 const OurSolutions = () => {
   return (
-    <section className="mt-[13.4rem] mb-[16rem] block px-[4rem] xl:px-0 lg:flex max-w-[110rem] mx-auto">
+    <section className="interactive mt-[13.4rem] mb-[16rem] block px-[4rem] xl:px-0 lg:flex max-w-[110rem] mx-auto">
     <div className="pb-[4.7rem] lg:basis-[34%] relative overflow-hidden">
       <Image
         src={data.imageSrc}
@@ -85,7 +85,7 @@ const OurSolutions = () => {
         <ul className="text-grey-text">
           {data.solutions.map((solution, index) => (
             <li key={index} className="mb-[1.1rem]">
-              <Link href={solution.link}>
+              <Link href={solution.link} className="interactive scale">
                 <span className="bg-transition text-[1.8rem] leading-[2.6rem] lg:text-nowrap">
                   {solution.name}
                 </span>

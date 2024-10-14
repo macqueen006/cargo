@@ -109,7 +109,7 @@ export const Footer = () => {
                                 <li key={index} className="mb-[1.5rem]">
                                     <Link
                                         href="#"
-                                        className="font-bold bg-transition text-[1.7rem] leading-[2.2rem] capitalize -tracking-[0.017rem]"
+                                        className="interactive scale font-bold bg-transition text-[1.7rem] leading-[2.2rem] capitalize -tracking-[0.017rem]"
                                     >
                                         {location.city} - {location.country}
                                     </Link>
@@ -126,7 +126,7 @@ export const Footer = () => {
                                     </h6>
                                     <Link
                                         href="tel:+2347014806219"
-                                        className="font-bold text-[3.7rem] md:text-[4.5rem] leading-[4.5rem] md:leading-[5.2rem] -tracking-[0.037rem] md:-tracking-[0.045rem]"
+                                        className="interactive scale font-bold text-[3.7rem] md:text-[4.5rem] leading-[4.5rem] md:leading-[5.2rem] -tracking-[0.037rem] md:-tracking-[0.045rem]"
                                     >
                                         {formatPhoneNumber(contact.support_center)}
                                     </Link>
@@ -137,7 +137,7 @@ export const Footer = () => {
                                     </h6>
                                     <Link
                                         href={`email:${contact.email}`}
-                                        className="font-bold text-[2.2rem] leading-[2.6rem] -tracking-[0.022rem] break-words"
+                                        className="interactive scale font-bold text-[2.2rem] leading-[2.6rem] -tracking-[0.022rem] break-words"
                                     >
                                         {contact.email}
                                     </Link>
@@ -149,7 +149,7 @@ export const Footer = () => {
                                 </h6>
                                 <Link
                                     href="#"
-                                    className="font-bold text-[2.2rem] leading-[2.6rem] -tracking-[0.022rem]"
+                                    className="interactive scale font-bold text-[2.2rem] leading-[2.6rem] -tracking-[0.022rem]"
                                 >
                                     {contact.address.street}, {contact.address.city}
                                 </Link>
@@ -161,7 +161,7 @@ export const Footer = () => {
                 <div className="pt-[10.5rem] pb-[2.9rem] w-full relative inline-block inner">
                     <div className="flex flex-wrap items-start -mx-[1.5rem]">
                         <div className="mb-[6rem] px-[1.5rem] w-full">
-                            <Link href="#" className="inline-block">
+                            <Link href="#" className="interactive scale inline-block">
                                 <Image
                                     className="max-w-full"
                                     src={footer.logo}
@@ -180,7 +180,7 @@ export const Footer = () => {
                                     <li key={index} className="mb-[1.5rem]">
                                         <Link
                                             href={division.url}
-                                            className="bg-transition text-[1.7rem] leading-[2.6rem] capitalize"
+                                            className="interactive scale bg-transition text-[1.7rem] leading-[2.6rem] capitalize"
                                         >
                                             {division.name}
                                         </Link>
@@ -198,7 +198,7 @@ export const Footer = () => {
                                     <li key={index} className="mb-[1.5rem]">
                                         <Link
                                             href={service.url}
-                                            className="bg-transition text-[1.7rem] leading-[2.6rem] capitalize"
+                                            className="interactive scale bg-transition text-[1.7rem] leading-[2.6rem] capitalize"
                                         >
                                             {service.name}
                                         </Link>
@@ -217,7 +217,7 @@ export const Footer = () => {
                                     <li key={index} className="mb-[1.5rem]">
                                         <Link
                                             href={contact.url}
-                                            className="bg-transition text-[1.7rem] leading-[2.6rem] capitalize"
+                                            className="interactive scale bg-transition text-[1.7rem] leading-[2.6rem] capitalize"
                                         >
                                             {contact.name}
                                         </Link>
@@ -235,7 +235,7 @@ export const Footer = () => {
                                     <li key={index} className="mb-[1.5rem]">
                                         <Link
                                             href={news.url}
-                                            className="bg-transition text-[1.7rem] leading-[2.6rem] capitalize"
+                                            className="interactive scale bg-transition text-[1.7rem] leading-[2.6rem] capitalize"
                                         >
                                             {news.name}
                                         </Link>
@@ -253,7 +253,7 @@ export const Footer = () => {
                             <p className="text-[1.5rem] my-[1rem] leading-[2.6rem] text-dark-color">
                                 &copy; 2024 {" "}
                                 <Link
-                                    className="text-transition bg-gradient-to-r from-dark-color to-dark-color"
+                                    className="interactive scale text-transition bg-gradient-to-r from-dark-color to-dark-color"
                                     href={footer.website.url}
                                 >
                                     {footer.website.name}

@@ -4,7 +4,7 @@ import {prefix} from "@/libs/util";
 
 const Frame = () => {
     return (
-      <section className="relative block w-full">
+      <section data-type="video" className="interactive relative block w-full">
         <div className="relative block w-full">
           <div className="w-full">
             <Image

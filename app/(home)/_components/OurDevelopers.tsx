@@ -11,7 +11,7 @@ const OurDevelopers = () => {
           <div className="basis-full flex flex-col sm:flex-row flex-wrap lg:-mx-[2rem]">
             <div className="mb-[4rem] shrink-0 basis-full flex items-center group lg:px-[2rem] sm:basis-1/2 lg:basis-1/4">
               <div className="block">
-                <Link href="#">
+                <Link href="#" className="interactive scale">
                   <Image
                     className="clip-img block group-hover:active max-w-full"
                     src={`${prefix}08/main-home-team-1-1.png`}
@@ -26,14 +26,14 @@ const OurDevelopers = () => {
                   Developer
                 </span>
                 <h4 className="mb-[1rem] font-bold text-[2.2rem] leading-[2.5rem] -tracking-[0.022rem]">
-                  <Link href="#">Godwin Sawyer</Link>
+                  <Link href="#" className="interactive scale">Godwin Sawyer</Link>
                 </h4>
               </div>
             </div>
             {/* Developer */}
             <div className="mb-[4rem] shrink-0 basis-full flex items-center group lg:px-[2rem] sm:basis-1/2 lg:basis-1/4">
               <div className="block">
-                <Link href="#">
+                <Link href="#" className="interactive scale">
                   <Image
                     className="clip-img group-hover:active max-w-full"
                     src={`${prefix}08/team-single-img1.png`}
@@ -48,14 +48,14 @@ const OurDevelopers = () => {
                   Copy Writer
                 </span>
                 <h4 className="mb-[1rem] font-bold text-[2.2rem] leading-[2.5rem] -tracking-[0.022rem]">
-                  <Link href="#">Nina West</Link>
+                  <Link href="#" className="interactive scale">Nina West</Link>
                 </h4>
               </div>
             </div>
             {/* Developer */}
             <div className="mb-[4rem] shrink-0 basis-full flex items-center group lg:px-[2rem] sm:basis-1/2 lg:basis-1/4">
               <div className="block">
-                <Link href="#">
+                <Link href="#" className="interactive scale">
                   <Image
                     className="clip-img group-hover:active max-w-full"
                     src={`${prefix}08/main-home-team-3-1.png`}
@@ -70,14 +70,14 @@ const OurDevelopers = () => {
                   Co Founder
                 </span>
                 <h4 className="mb-[1rem] font-bold text-[2.2rem] leading-[2.5rem] -tracking-[0.022rem]">
-                  <Link href="#">Godwin Newt</Link>
+                  <Link href="#" className="interactive scale">Godwin Newt</Link>
                 </h4>
               </div>
             </div>
             {/* Developer */}
             <div className="mb-[4rem] shrink-0 basis-full flex items-center group lg:px-[2rem] sm:basis-1/2 lg:basis-1/4">
               <div className="block">
-                <Link href="#">
+                <Link href="#" className="interactive scale">
                   <Image
                     className="clip-img group-hover:active max-w-full"
                     src={`${prefix}08/main-home-team-4-1.png`}
@@ -92,7 +92,7 @@ const OurDevelopers = () => {
                   Web Designer
                 </span>
                 <h4 className="mb-[1rem] font-bold text-[2.2rem] leading-[2.5rem] -tracking-[0.022rem]">
-                  <Link href="#">Susie Marsh</Link>
+                  <Link href="#" className="interactive scale">Susie Marsh</Link>
                 </h4>
               </div>
             </div>

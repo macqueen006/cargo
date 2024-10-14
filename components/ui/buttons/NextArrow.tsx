@@ -3,7 +3,8 @@ function NextArrow(props: { onClick?: () => void }) {
     return (
       <div
         onClick={onClick}
-        className="arrow-right group cursor-pointer z-[6] opacity-100 top-full left-full bg-transparent absolute w-[6.6rem] h-[8rem] flex items-center text-dark-color transform: translate(-106px,-80px) -translate-x-[10.6rem] -translate-y-[8rem] lg:-translate-x-[19rem]"
+        data-type="color"
+        className="interactive scale arrow-right group z-[6] opacity-100 top-full left-full bg-transparent absolute w-[6.6rem] h-[8rem] flex items-center text-dark-color transform: translate(-106px,-80px) -translate-x-[10.6rem] -translate-y-[8rem] lg:-translate-x-[19rem]"
       >
         <span className="text-[1.7rem] font-[700] leading-[2.2rem] -tracking-[0.017rem] text-dark-color before:content-['Next'] group-hover:-translate-x-[1rem] transition-transform duration-[.2s] ease-linear"></span>
         <svg
@@ -12,7 +13,7 @@ function NextArrow(props: { onClick?: () => void }) {
           xmlns="http://www.w3.org/2000/svg"
           width="22"
           height="16.971"
-          viewBox="0 0 22 16.971"
+          viewBox="0 0 22 16.971" 
         >
           <g transform="translate(-758.1 -1746.515)">
             <rect

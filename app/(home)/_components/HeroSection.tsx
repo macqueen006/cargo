@@ -1,12 +1,12 @@
 "use client";
 import React, {useState} from "react";
 import Slider, {LazyLoadTypes} from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import NextArrow from "@/components/ui/buttons/NextArrow";
 import PrevArrow from "@/components/ui/buttons/PrevArrow";
 import Image from "next/image";
 import {prefix} from "@/libs/util";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const slides = [
     {
@@ -84,12 +84,12 @@ const HeroSection = () => {
     };
 
     return (
-        <section className="relative block w-full h-auto bg-main-color">
+        <section data-type="color" className="relative block w-full h-auto bg-main-color interactive">
             <div className="slider-container w-full h-[81.2rem] relative lg:h-[67.6rem]">
                 <Slider ref={(s) => setSlider(s)} {...settings}>
                     {slides.map((slide, index) => (
-                        <div key={index} className="w-full h-[81.2rem] lg:h-[67.6rem]">
-                            <picture>
+                        <div key={index} className="w-full h-[81.2rem] lg:h-[67.6rem] relative">
+                            <picture className="absolute w-full h-full top-0 left-0">
                                 <source media="(max-width: 640px)" srcSet={slide.img.mobile}/>
                                 <source media="(min-width: 641px) and (max-width: 1024px)" srcSet={slide.img.tablet}/>
                                 <source media="(min-width: 641px)" srcSet={slide.img.desktop}/>
@@ -98,6 +98,7 @@ const HeroSection = () => {
                                     src={slide.img.desktop}
                                     style={{objectFit: "cover", backgroundPosition: 'center 0'}}
                                     fill
+                                    sizes="100%"
                                     alt="img"
                                 />
                             </picture>
@@ -122,11 +123,12 @@ const HeroSection = () => {
                     style={{width: `${slides.length * 100}px`}}>
                     {[...Array(slides.length)].map((_, index) => (
                         <div
+                            data-type="color"
                             key={index}
                             onClick={() => goToSlide(index)}
                             className={`bullet ${
                                 index === activeSlide ? "selected" : ""
-                            } absolute top-0 flex items-center justify-center visible w-[10rem] h-[8rem] bg-transparent text-dark-color cursor-pointer`}
+                            } absolute top-0 flex items-center justify-center visible w-[10rem] h-[8rem] bg-transparent text-dark-color interactive scale`}
                             style={{left: `${index * 100}px`}}
                         >
               <span className="text-[1.7rem] leading-[2.2rem] -tracking-[0.018rem] font-bold font-arial">
@@ -140,6 +142,5 @@ const HeroSection = () => {
         </section>
     );
 };
-
 
 export default HeroSection;

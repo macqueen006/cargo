@@ -10,7 +10,7 @@ const ViewMoreButton: React.FC<ViewMoreProps> = ({ href, text }) => {
   return (
     <Link
       href={href}
-      className="group flex items-center"
+      className="interactive scale group flex items-center"
       aria-label={`View more about ${text}`}
     >
       <span className="w-[5.4rem] bg-main-color shrink-0 h-[5.4rem] rounded-full flex justify-center items-center">

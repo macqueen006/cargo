@@ -34,7 +34,7 @@ const contactInfo = {
     iconAlt: "Tracking Icon",
     text: "Track and Trace",
     iconWidth: 14,
-    iconHeight: 20,
+    iconHeight: 18,
   },
 };
 
@@ -75,9 +75,9 @@ const BannerLink: React.FC<BannerLinkProps> = ({ data, className }) => {
   return (
     <div className={cn(`flex items-end`, className)}>
       <Link href={data.href} className="flex items-center">
-        <span className="mr-[1.5rem] flex items-center ">
+        <span className="mr-[1.5rem] flex items-center relative">
           <Image
-            className="max-w-full"
+            className="block"
             src={data.iconSrc}
             alt={data.iconAlt}
             width={data.iconWidth}

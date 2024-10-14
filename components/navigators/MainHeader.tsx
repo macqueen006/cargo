@@ -39,11 +39,12 @@ const MainHeader = () => {
 
   return (
     <>
-      <header className="relative lg:inline-block w-full z-[100] h-[8rem] bg-transparent hidden">
+      <header data-type="color" className="interactive relative lg:inline-block w-full z-[100] h-[8rem] bg-transparent hidden">
         <div className="border-b border-dark-color flex justify-between h-full">
           <Link
             href="#"
-            className="flex items-center shrink-0 h-[8rem] max-h-full pl-[4rem]"
+            data-type="color"
+            className="interactive scale flex items-center shrink-0 h-[8rem] max-h-full pl-[4rem]"
           >
             <Image
               src={`${prefix}08/Logo-Inner-Pages.svg`}
@@ -131,20 +132,20 @@ const LinkWithDropdown: React.FC<DropdownLinkProps> = ({
 }) => {
   return (
     <li  className="h-full px-[2.8rem] header-transition group">
-      <Link href={href} className="flex relative items-center h-full">
+      <Link href={href} data-type="color" className="interactive scale flex relative items-center h-full">
         <span className="font-bold text-[1.7rem] leading-[2.2rem] -tracking-[0.017rem]">
           {label}
         </span>
       </Link>
       {dropdownItems && dropdownItems.length > 0 && (
-        <div className="header-down group-hover:active bg-dark-color">
+        <div data-type="revert-color" className="interactive header-down group-hover:active bg-dark-color">
           <div className="relative inline-block w-full text-white">
             <ul className="py-[1.8rem] w-[24rem]">
               {dropdownItems.map((item, index) => (
                 <li key={index} className="px-[2.8rem]">
                   <Link
                     href={item.href}
-                    className="flex group/hover overflow-hidden my-[1.4rem] pr-[2.8rem] transition-[padding] duration-[.2s] ease-out relative"
+                    className="interactive scale flex group/hover overflow-hidden my-[1.4rem] pr-[2.8rem] transition-[padding] duration-[.2s] ease-out relative"
                   >
                     <span className="text-[1.7rem] leading-[2.2rem] -tracking-[0.017rem] font-bold capitalize flex items-center justify-between relative">
                       <svg
@@ -226,7 +227,7 @@ const TrackAndTraceDropdown: React.FC<TrackProps> = ({
       {/*  Tracking link */}
       <div className="header-down group-hover/tracking:active bg-dark-color w-full">
         <div className="relative inline-block w-full text-white">
-          <div className="px-[2.6rem] pt-[3.4rem] pb-[4.4rem] w-full h-full">
+          <div data-type="revert-color" className="interactive px-[2.6rem] pt-[3.4rem] pb-[4.4rem] w-full h-full">
             <h1 className="mb-[3rem] text-[1.8rem] leading-[2.6rem] text-center">
               {dropdownLabel}
             </h1>

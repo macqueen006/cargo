@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import React from "react";
-// import localFont from "next/font/local";
 import "./globals.css";
 import { Sarabun, Inter } from "next/font/google";
 import BackToTop from "@/components/BackToTop";
 import TopBanner from "@/components/navigators/TopBanner";
 import SidebarDrawer from "@/components/SidebarDrawer";
 import {DrawerProvider} from "./context/DrawerContext";
+import MouseTrailer from "@/components/MouseTrailer";
 
 const sarabun = Sarabun({
   subsets: ["latin"],
@@ -36,6 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${sarabun.variable} ${inter.variable} font-sarabun antialiased`}>
+      <MouseTrailer />
       <DrawerProvider>
         <TopBanner />
         {children}
