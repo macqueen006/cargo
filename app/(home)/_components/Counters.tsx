@@ -1,6 +1,6 @@
 const Counters = () => {
     return (
-      <section data-type="color" className="py-[16rem] bg-main-color block relative interactive">
+      <section className="py-[16rem] bg-main-color block relative counter-section">
         <div className="px-[4rem] xl:px-0 w-full flex flex-wrap relative max-w-[1100px] mx-auto">
           <div className="w-full flex content-start pb-[7rem] lg:pb-0 sm:basis-1/2 lg:basis-1/4">
             <div className="pl-[4rem] border-l border-dark-color">

@@ -10,10 +10,10 @@ const ViewMoreButton: React.FC<ViewMoreProps> = ({ href, text }) => {
   return (
     <Link
       href={href}
-      className="interactive scale group flex items-center"
+      className="group flex items-center"
       aria-label={`View more about ${text}`}
     >
-      <span className="w-[5.4rem] bg-main-color shrink-0 h-[5.4rem] rounded-full flex justify-center items-center">
+      <span className="button-icon w-[5.4rem] bg-main-color shrink-0 h-[5.4rem] rounded-full flex justify-center items-center">
         <svg
           aria-hidden="true"
           className="rotate-0 group-hover:rotate-90 origin-center transition-transform duration-[.2s] ease-out"

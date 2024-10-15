@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import HamburgerBtn from "../ui/buttons/HamburgerBtn";
 import { prefix } from "@/libs/util";
-import {useDrawer} from "@/app/context/DrawerContext";
+import { useDrawer } from "@/app/context/DrawerContext";
 
 const linksData = [
   {
@@ -34,17 +34,15 @@ const linksData = [
 ];
 
 const MainHeader = () => {
-
-  const {isDrawerOpen, toggleDrawer} = useDrawer();
+  const { isDrawerOpen, toggleDrawer } = useDrawer();
 
   return (
     <>
-      <header data-type="color" className="interactive relative lg:inline-block w-full z-[100] h-[8rem] bg-transparent hidden">
+      <header className="main-header relative lg:inline-block w-full z-[100] h-[8rem] bg-transparent hidden">
         <div className="border-b border-dark-color flex justify-between h-full">
           <Link
             href="#"
-            data-type="color"
-            className="interactive scale flex items-center shrink-0 h-[8rem] max-h-full pl-[4rem]"
+            className="flex items-center shrink-0 h-[8rem] max-h-full pl-[4rem]"
           >
             <Image
               src={`${prefix}08/Logo-Inner-Pages.svg`}
@@ -66,7 +64,10 @@ const MainHeader = () => {
             </ul>
           </nav>
           <div className="flex items-center ml-[2.8rem] h-full relative">
-            <TrackAndTraceDropdown label="track your order" dropdownLabel="keep track of your packages">
+            <TrackAndTraceDropdown
+              label="track your order"
+              dropdownLabel="keep track of your packages"
+            >
               <form action="">
                 <div className="relative">
                   <label htmlFor="UserEmail" className="sr-only">
@@ -108,7 +109,11 @@ const MainHeader = () => {
               </form>
             </TrackAndTraceDropdown>
             <div className="flex items-center h-full relative">
-              <HamburgerBtn dark={true} toggle={isDrawerOpen} handleToggle={toggleDrawer} />
+              <HamburgerBtn
+                dark={true}
+                toggle={isDrawerOpen}
+                handleToggle={toggleDrawer}
+              />
             </div>
             {/* Hamburger menu */}
           </div>
@@ -122,7 +127,7 @@ interface DropdownLinkProps {
   label: string;
   href: string;
   dropdownItems?: { href: string; text: string }[];
-  key: number
+  key: number;
 }
 
 const LinkWithDropdown: React.FC<DropdownLinkProps> = ({
@@ -131,21 +136,21 @@ const LinkWithDropdown: React.FC<DropdownLinkProps> = ({
   dropdownItems,
 }) => {
   return (
-    <li  className="h-full px-[2.8rem] header-transition group">
-      <Link href={href} data-type="color" className="interactive scale flex relative items-center h-full">
+    <li className="h-full px-[2.8rem] header-transition group">
+      <Link href={href} className="  flex relative items-center h-full">
         <span className="font-bold text-[1.7rem] leading-[2.2rem] -tracking-[0.017rem]">
           {label}
         </span>
       </Link>
       {dropdownItems && dropdownItems.length > 0 && (
-        <div data-type="revert-color" className="interactive header-down group-hover:active bg-dark-color">
+        <div className="header-down group-hover:active bg-dark-color">
           <div className="relative inline-block w-full text-white">
-            <ul className="py-[1.8rem] w-[24rem]">
+            <ul className="py-[1.8rem] w-[24rem] header-dropdown">
               {dropdownItems.map((item, index) => (
                 <li key={index} className="px-[2.8rem]">
                   <Link
                     href={item.href}
-                    className="interactive scale flex group/hover overflow-hidden my-[1.4rem] pr-[2.8rem] transition-[padding] duration-[.2s] ease-out relative"
+                    className="  flex group/hover overflow-hidden my-[1.4rem] pr-[2.8rem] transition-[padding] duration-[.2s] ease-out relative"
                   >
                     <span className="text-[1.7rem] leading-[2.2rem] -tracking-[0.017rem] font-bold capitalize flex items-center justify-between relative">
                       <svg
@@ -227,7 +232,7 @@ const TrackAndTraceDropdown: React.FC<TrackProps> = ({
       {/*  Tracking link */}
       <div className="header-down group-hover/tracking:active bg-dark-color w-full">
         <div className="relative inline-block w-full text-white">
-          <div data-type="revert-color" className="interactive px-[2.6rem] pt-[3.4rem] pb-[4.4rem] w-full h-full">
+          <div className="header-tracking  px-[2.6rem] pt-[3.4rem] pb-[4.4rem] w-full h-full">
             <h1 className="mb-[3rem] text-[1.8rem] leading-[2.6rem] text-center">
               {dropdownLabel}
             </h1>

@@ -325,13 +325,17 @@
     transition: opacity 0.3s ease;
   }
 
-  /* Mouse Trailer */
-  body:hover > #trailer {
-    opacity: 1;
-    visibility: visible;
+  /* Custom Cursor */
+  :not(.touchevents).custom-cursor--enabled {
+    cursor: none !important;
   }
 
-  #trailer {
+  :not(.touchevents).custom-cursor--enabled #custom-cursor {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #custom-cursor {
     position: fixed;
     top: -5px;
     left: -5px;
@@ -340,10 +344,85 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 12px;
+    height: 12px;
     visibility: hidden;
     opacity: 0;
     color: #1b1b1b;
     transition: visibility 0.2s ease-out, opacity 0.2s ease-out;
+  }
+
+  #custom-cursor .cursor-dot {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    z-index: 1;
+  }
+
+  #custom-cursor .cursor-svg-holder,
+  #custom-cursor .cursor-text-holder {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+  }
+
+  #custom-cursor .cursor-svg-holder > *,
+  #custom-cursor .cursor-text-holder > * {
+    position: absolute;
+  }
+  #custom-cursor .cursor-close-svg,
+  #custom-cursor .cursor-link-svg,
+  #custom-cursor .cursor-video-button-svg {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  #custom-cursor.cursor--close-svg .cursor-close-svg {
+    opacity: 1;
+    transition: opacity 0.3s ease 0.2s;
+  }
+
+  #custom-cursor.cursor--link-svg .cursor-link-svg {
+    opacity: 1;
+    transition: opacity 0.3s ease 0.2s;
+  }
+
+  #custom-cursor.cursor--hide {
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+
+  #custom-cursor.cursor--change-color .cursor-dot {
+    background-color: #000;
+  }
+
+  #custom-cursor.cursor--revert-color .cursor-dot {
+    background-color: var(--main-color);
+  }
+
+  #custom-cursor.cursor--video-button .cursor-video-button-svg {
+    opacity: 1;
+    transition: opacity 0.3s ease 0.2s;
+  }
+
+  #custom-cursor.cursor--text .cursor-discover-text {
+    opacity: 1;
+    transition: opacity 0.3s ease 0.2s;
+  }
+
+  #custom-cursor .cursor-discover-text {
+    opacity: 0;
+    color: currentColor;
+    font-size: 15px;
+    letter-spacing: -0.01em;
+    font-weight: 700;
+    text-transform: capitalize;
   }
 }
 

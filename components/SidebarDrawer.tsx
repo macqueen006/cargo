@@ -34,8 +34,8 @@ const SidebarDrawer = () => {
 
     return (
         <div>
-            <div data-type="close" onClick={closeDrawer}
-                 className={`interactive fixed z-[100] top-0 ${isDrawerOpen ? 'block' : 'hidden'} left-0 w-full h-full bg-[rgba(0,0,0,0.2)]`}></div>
+            <div onClick={closeDrawer}
+                 className={`close-sidebar fixed z-[100] top-0 ${isDrawerOpen ? 'block' : 'hidden'} left-0 w-full h-full bg-[rgba(0,0,0,0.2)]`}></div>
             <div className={`side-area ${isDrawerOpen && 'active'}`}>
                 <div
                     ref={containerRef}

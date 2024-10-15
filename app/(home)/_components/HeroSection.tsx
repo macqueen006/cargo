@@ -84,7 +84,7 @@ const HeroSection = () => {
     };
 
     return (
-        <section data-type="color" className="relative block w-full h-auto bg-main-color interactive">
+        <section data-type="color" className="hero relative block w-full h-auto bg-main-color interactive">
             <div className="slider-container w-full h-[81.2rem] relative lg:h-[67.6rem]">
                 <Slider ref={(s) => setSlider(s)} {...settings}>
                     {slides.map((slide, index) => (

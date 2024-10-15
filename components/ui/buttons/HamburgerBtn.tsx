@@ -10,7 +10,7 @@ interface ButtonProps {
 const HamburgerBtn: React.FC<ButtonProps> = ({ toggle, handleToggle, dark }) => {
   return (
     <button
-      className={`w-[8rem] h-[8rem] z-10 bg-dark-color block relative overflow-hidden -mt-[1px] m-icon hover:open ${dark ? "hover:dark text-white": "hover:light text-dark-color"}`}
+      className={`w-[8rem] h-[8rem] z-10 bg-dark-color block relative overflow-hidden -mt-[1px] m-icon hover:open ${dark ? "hover:dark text-white": "hover:light text-dark-color"} cursor-none toggle-btn`}
       onClick={handleToggle}
     >
       {toggle ? (

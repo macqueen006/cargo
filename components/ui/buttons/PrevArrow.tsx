@@ -3,8 +3,7 @@ function PrevArrow(props: { onClick?: () => void }) {
     return (
       <div
         onClick={onClick}
-        data-type="color"
-        className="interactive scale arrow-left z-[6] group opacity-100 top-full left-0  bg-transparent absolute h-[8rem] w-[6.6rem] flex items-center text-dark-color translate-x-[4rem] -translate-y-[8rem] lg:translate-x-[12.5rem] lg:-translate-y-[8rem]"
+        className="slick-button-prev arrow-left z-[6] group opacity-100 top-full left-0  bg-transparent absolute h-[8rem] w-[6.6rem] flex items-center text-dark-color translate-x-[4rem] -translate-y-[8rem] lg:translate-x-[12.5rem] lg:-translate-y-[8rem]"
       >
         <svg
           className="mr-[1.0rem] flex-[1_0_auto] overflow-visible transition-[margin] duration-[.3s] ease-linear"

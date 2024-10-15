@@ -5,21 +5,21 @@ import { Sarabun, Inter } from "next/font/google";
 import BackToTop from "@/components/BackToTop";
 import TopBanner from "@/components/navigators/TopBanner";
 import SidebarDrawer from "@/components/SidebarDrawer";
-import {DrawerProvider} from "./context/DrawerContext";
-import MouseTrailer from "@/components/MouseTrailer";
+import { DrawerProvider } from "./context/DrawerContext";
+import CustomCursor from "@/components/CustomCursor";
 
 const sarabun = Sarabun({
   subsets: ["latin"],
   style: "normal",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-  display: 'swap',
-  variable: '--font-sarabun',
+  display: "swap",
+  variable: "--font-sarabun",
 });
 
 const inter = Inter({
   subsets: ["latin"],
-  display: 'swap',
-  variable: '--font-inter',
+  display: "swap",
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -32,17 +32,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <html lang="en">
-      <body className={`${sarabun.variable} ${inter.variable} font-sarabun antialiased`}>
-      <MouseTrailer />
-      <DrawerProvider>
-        <TopBanner />
-        {children}
-        <BackToTop />
-        <SidebarDrawer  />
-      </DrawerProvider>
+      <body
+        className={`${sarabun.variable} ${inter.variable} font-sarabun antialiased`}
+      >
+        <DrawerProvider>
+          <TopBanner />
+          {children}
+          <BackToTop />
+          <SidebarDrawer />
+        </DrawerProvider>
+        <CustomCursor />
       </body>
     </html>
   );

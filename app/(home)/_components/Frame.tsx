@@ -4,7 +4,7 @@ import VideoPopup from "@/components/VideoPopup";
 
 const Frame = () => {
     return (
-      <section data-type="video" className="interactive relative block w-full">
+      <section className="section-video relative block w-full">
         <div className="relative block w-full">
           <div className="w-full">
             <Image

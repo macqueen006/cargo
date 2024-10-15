@@ -45,7 +45,7 @@ const BackToTop = () => {
 
     return (
         <div onClick={() => scrollToTop(1000)}
-             className={`fixed ${visible ? 'back-to-top-on' : 'back-to-top-off'} w-[6rem] h-[6rem] right-[40px] bottom-[60px] overflow-hidden z-[1000]`}>
+             className={`fixed ${visible ? 'back-to-top-on' : 'back-to-top-off'} back-to-top w-[6rem] h-[6rem] right-[40px] bottom-[60px] overflow-hidden z-[1000]`}>
         <span
             className="h-full group relative w-full rounded-full flex items-center justify-center bg-main-color border border-main-color">
           <svg
