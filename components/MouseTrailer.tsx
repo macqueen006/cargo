@@ -1,14 +1,35 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 
 const MouseTrailer = () => {
   const cursorRef = useRef<HTMLDivElement | null>(null);
   const [cursorTypeStack, setCursorTypeStack] = useState<string[]>(["default"]);
+  const [isTouchDevice, setIsTouchDevice] = useState(false); // State to track if the device is touch-enabled
   const currentCursorType = cursorTypeStack[cursorTypeStack.length - 1];
 
+  useEffect(() => {
+    // Detect if the device is touch-enabled
+    const checkTouchDevice = () => {
+      setIsTouchDevice(
+        "ontouchstart" in window || navigator.maxTouchPoints > 0
+      );
+    };
+
+    checkTouchDevice();
+
+    // Optionally add an event listener to handle changes dynamically
+    window.addEventListener("resize", checkTouchDevice);
+
+    return () => {
+      window.removeEventListener("resize", checkTouchDevice);
+    };
+  }, []);
+
   useGSAP(() => {
+    if (isTouchDevice) return; // Skip mouse events for touch devices
+
     const onMouseMove = (e: MouseEvent) => {
       gsap.to(cursorRef.current, {
         x: e.clientX,
@@ -23,12 +44,7 @@ const MouseTrailer = () => {
       if (target.classList.contains("interactive")) {
         const newType = target.dataset.type || "default";
         setCursorTypeStack((prev) => [...prev, newType]);
-        if (newType === "video") {
-          gsap.to(cursorRef.current, { scale: 1.5, duration: 0.3 });
-        }
-        if (target.classList.contains("scale")) {
-          gsap.to(cursorRef.current, { scale: 1.5, duration: 0.3 });
-        }
+        gsap.to(cursorRef.current, { scale: 1.5, duration: 0.3 });
       }
     };
 
@@ -49,7 +65,7 @@ const MouseTrailer = () => {
       document.removeEventListener("mouseenter", onMouseEnter, true);
       document.removeEventListener("mouseleave", onMouseLeave, true);
     };
-  }, []);
+  }, [isTouchDevice]);
 
   const renderCursorContent = () => {
     switch (currentCursorType) {
@@ -92,38 +108,6 @@ const MouseTrailer = () => {
             </svg>
           </div>
         );
-      case "link":
-        return (
-          <div className="flex justify-center items-center w-[5rem] h-[5rem] rounded-full bg-main-color text-dark-color">
-            <svg
-              className="w-[1.2rem] h-[1.2rem] block"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-            </svg>
-          </div>
-        );
-      case "color":
-        return (
-          <div
-            className={`relative block w-[1.2rem] h-[1.2rem] rounded-full bg-dark-color z-[1]`}
-          ></div>
-        );
-      case "revert-color":
-        return (
-          <div
-            className={`relative block w-[1.2rem] h-[1.2rem] rounded-full bg-main-color z-[1]`}
-          ></div>
-        );
       default:
         return (
           <div
@@ -132,6 +116,8 @@ const MouseTrailer = () => {
         );
     }
   };
+
+  if (isTouchDevice) return null; 
 
   return (
     <div ref={cursorRef} id="trailer" className={`cursor-${currentCursorType}`}>
