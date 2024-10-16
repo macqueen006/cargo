@@ -40,7 +40,7 @@ const CustomCursor: React.FC = () => {
         },
         // Hover
         {
-          selector: '.toggle-btn, button, .back-to-top, .button-icon',
+          selector: '.toggle-btn, button, .back-to-top, .button-icon, .fancybox__content',
           addClass: 'cursor--hide',
         },
         // Hide
@@ -73,7 +73,7 @@ const CustomCursor: React.FC = () => {
         },
         // anchorTag Link
         {
-          selector: '.close-sidebar',
+          selector: '.close-sidebar, .fancybox__track',
           addClass: 'cursor--close-svg',
           scale: 8.7,
         },
