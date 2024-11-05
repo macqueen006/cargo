@@ -85,10 +85,10 @@ const HeroSection = () => {
 
     return (
         <section data-type="color" className="hero relative block w-full h-auto bg-main-color interactive">
-            <div className="slider-container w-full h-[81.2rem] relative lg:h-[67.6rem]">
+            <div className="slider-container w-full h-dvh">
                 <Slider ref={(s) => setSlider(s)} {...settings}>
                     {slides.map((slide, index) => (
-                        <div key={index} className="w-full h-[81.2rem] lg:h-[67.6rem] relative">
+                        <div key={index} className="w-full h-dvh relative">
                             <picture className="absolute w-full h-full top-0 left-0">
                                 <source media="(max-width: 640px)" srcSet={slide.img.mobile}/>
                                 <source media="(min-width: 641px) and (max-width: 1024px)" srcSet={slide.img.tablet}/>
