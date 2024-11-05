@@ -75,7 +75,7 @@ const CustomCursor: React.FC = () => {
         {
           selector: '.close-sidebar, .fancybox__track',
           addClass: 'cursor--close-svg',
-          scale: 8.7,
+          scale: 8.1,
         },
         // Close
       ];
